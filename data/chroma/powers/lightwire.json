@@ -1,0 +1,17 @@
+{
+  "name": "Lightwire",
+  "description": "Shoot a beam of light. Upon contact with a refractor, lightwires are charged and redirected to the next available refractor. When directed through colored glass, lightwires only seek out refractors of matching color. Charged lightwires deal damage.",
+  "type": "origins:active_self",
+  "entity_action": {
+    "type": "origins:execute_command",
+    "command": "function chroma:lightwire",
+    "permission_level": 4
+  },
+  "key": {
+      "key": "key.origins.primary_active"
+  },
+  "cooldown": 1,
+  "hud_render": {
+    "should_render": false
+  }
+}

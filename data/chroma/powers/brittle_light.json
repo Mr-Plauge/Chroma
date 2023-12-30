@@ -1,0 +1,74 @@
+{
+    "name": "Brittle Light",
+    "description": "You take more damage from explosions and projectiles. You are smaller, your health and armor are decreased, and your overall damage dealt is reduced.",
+    "type": "origins:multiple",
+    "explosion_player": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "explosion.player"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 8
+        }
+    },
+    "explosion": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "explosion"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 8
+        }
+    },
+    "projectile": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:projectile"
+        },
+        "modifier": {
+            "operation": "addition",
+            "value": 4
+        }
+    },
+    "attribute_modifiers": {
+        "type": "origins:attribute",
+        "modifiers": [
+            {
+                "attribute": "minecraft:generic.armor",
+                "value": -2,
+                "operation": "addition"
+            },
+            {
+                "attribute": "minecraft:generic.max_health",
+                "value": -4,
+                "operation": "addition"
+            }
+        ]
+    },
+    "damage": {
+        "type": "origins:modify_damage_dealt",
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.25
+        }
+    },
+    "scale": {
+        "type": "origins:action_on_callback",
+        "entity_action_added": {
+            "type": "origins:delay",
+            "ticks": 1,
+            "action": {
+                "type": "origins:execute_command",
+                "command": "function chroma:scale"
+            }
+        },
+        "entity_action_lost": {
+            "type": "origins:execute_command",
+            "command": "scale reset @s"
+        }
+    }
+}

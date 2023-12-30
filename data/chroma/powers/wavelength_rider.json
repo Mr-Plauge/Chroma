@@ -1,0 +1,68 @@
+{
+  "name": "Wavelength Rider",
+  "description": "By crouching, you can travel through charged lightwires. If your lightwire is colored, you gain a status effect upon teleportation.",
+  "type": "origins:multiple",
+  "activate": {
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:change_resource",
+        "resource": "chroma:wavelength_rider_bar",
+        "change": 5
+    },
+    "cooldown": 1,
+    "hud_render": {
+        "should_render": false
+    },
+    "key": {
+        "key": "key.sneak",
+        "continuous": true
+    }
+  },
+  "bar": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 6,
+    "start_value": 0,
+    "hud_render": {
+        "should_render": false
+    }
+  },
+  "bar_drain": {
+      "type": "origins:action_over_time",
+      "entity_action": {
+          "type": "origins:change_resource",
+          "resource": "chroma:wavelength_rider_bar",
+          "change": -1
+      },
+      "interval": 1,
+      "condition": {
+          "type": "origins:resource",
+          "resource": "chroma:wavelength_rider_bar",
+          "comparison": ">",
+          "compare_to": 0
+      }
+  },
+  "tag_add": {
+      "type": "origins:action_over_time",
+      "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "chroma:wavelength_rider_bar",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "if_action": {
+          "type": "origins:execute_command",
+          "command": "tag @s add lightwire_teleport",
+          "permission_level": 4
+        },
+        "else_action": {
+          "type": "origins:execute_command",
+          "command": "tag @s remove lightwire_teleport",
+          "permission_level": 4
+        }
+      },
+      "interval": 1
+  }
+}

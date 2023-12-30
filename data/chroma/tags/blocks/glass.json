@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "#chroma:red_glass",
+    "#chroma:green_glass",
+    "#chroma:blue_glass",
+    "#chroma:purple_glass",
+    "#chroma:black_glass",
+    "#chroma:null_glass"
+  ]
+}

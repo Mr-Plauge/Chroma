@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:glass",
+    "minecraft:white_stained_glass",
+    "minecraft:glass_pane",
+    "minecraft:white_stained_glass_pane",
+    "minecraft:tinted_glass"
+  ]
+}

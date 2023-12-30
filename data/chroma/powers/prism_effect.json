@@ -1,0 +1,5 @@
+{
+  "name": "Prism Effect",
+  "description": "Glass strengthens refractors and lightwires. When placed inside of a glass block, refractors last forever. Colored glass tints both refractors and lightwires when passed through, granting unique effects.",
+  "type": "origins:simple"
+}

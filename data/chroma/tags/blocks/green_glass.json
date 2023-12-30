@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:brown_stained_glass",
+    "minecraft:green_stained_glass",
+    "minecraft:lime_stained_glass",
+    "minecraft:brown_stained_glass_pane",
+    "minecraft:green_stained_glass_pane",
+    "minecraft:lime_stained_glass_pane"
+  ]
+}

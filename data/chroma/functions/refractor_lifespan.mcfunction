@@ -1,0 +1,4 @@
+execute as @e[type=minecraft:area_effect_cloud,tag=refractor] run execute positioned as @s at @s unless block ~ ~ ~ #chroma:glass run scoreboard players add @s refractor_life 20
+execute as @e[type=minecraft:area_effect_cloud,tag=refractor] run execute positioned as @s at @s if block ~ ~ ~ #chroma:glass run scoreboard players set @s refractor_life 0
+execute as @e[type=minecraft:area_effect_cloud,tag=refractor] run execute positioned as @s at @s if score @s refractor_life matches 180.. run playsound minecraft:block.beacon.deactivate player @a ~ ~ ~ 1 1.5
+execute as @e[type=minecraft:area_effect_cloud,tag=refractor] run execute positioned as @s at @s if score @s refractor_life matches 180.. run kill @s

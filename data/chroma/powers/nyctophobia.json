@@ -1,0 +1,137 @@
+{
+    "name": "Nyctophobia",
+    "description": "In the dark, light is weak. You are inflicted with scaling mining fatigue and slowness inside of dark areas.",
+    "type": "origins:multiple",
+    "tier_1": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+            {
+                "effect": "minecraft:mining_fatigue",
+                "duration": 60,
+                "amplifier": 0,
+                "show_particles": false
+            },
+            {
+                "effect": "minecraft:slowness",
+                "duration": 60,
+                "amplifier": 0,
+                "show_particles": false
+            }
+            ]
+        },
+        "interval": 40,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "block",
+                        "comparison": "<",
+                        "compare_to": 10
+                    }
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "sky",
+                        "comparison": "<",
+                        "compare_to": 10
+                    }
+                }
+            ]
+        }
+    },
+    "tier_2": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+            {
+                "effect": "minecraft:mining_fatigue",
+                "duration": 60,
+                "amplifier": 1,
+                "show_particles": false
+            },
+            {
+                "effect": "minecraft:slowness",
+                "duration": 60,
+                "amplifier": 1,
+                "show_particles": false
+            }
+            ]
+        },
+        "interval": 40,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "block",
+                        "comparison": "<",
+                        "compare_to": 5
+                    }
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "sky",
+                        "comparison": "<",
+                        "compare_to": 5
+                    }
+                }
+            ]
+        }
+    },
+    "tier_3": {
+        "type": "origins:action_over_time",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+            {
+                "effect": "minecraft:mining_fatigue",
+                "duration": 60,
+                "amplifier": 2,
+                "show_particles": false
+            },
+            {
+                "effect": "minecraft:slowness",
+                "duration": 60,
+                "amplifier": 2,
+                "show_particles": false
+            }
+            ]
+        },
+        "interval": 40,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "block",
+                        "comparison": "<",
+                        "compare_to": 1
+                    }
+                },
+                {
+                    "type": "origins:in_block",
+                    "block_condition": {
+                        "type": "origins:light_level",
+                        "light_type": "sky",
+                        "comparison": "<",
+                        "compare_to": 1
+                    }
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "icon": "minecraft:beacon",
+  "order": 0,
+  "impact": 3,
+  "name": "Chroma",
+  "description": "Vibrant and quick, Chromas use their eyes to refract light into a deadly laserbeam.",
+  "powers": [
+    "chroma:lightwire",
+    "chroma:refractor",
+    "chroma:refractor_lifespan",
+    "chroma:wavelength_rider",
+    "chroma:prism_effect",
+    "chroma:rebounding",
+    "chroma:nyctophobia",
+    "chroma:brittle_light",
+    "chroma:sounds"
+  ]
+}
